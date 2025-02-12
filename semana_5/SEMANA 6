@@ -1,0 +1,32 @@
+# Función para cargar datos en una lista
+def cargar_lista(n, lista):
+    print(f"\nIngrese {n} números para la lista:")
+    for i in range(n):
+        dato = int(input(f"Elemento {i+1}: "))
+        lista.append(dato)
+
+# Función principal
+def comparar_listas():
+    # Crear dos listas vacías
+    lista1 = []
+    lista2 = []
+
+    # Solicitar el número de elementos para las listas
+    print("Ingrese la cantidad de elementos que tendrá cada lista.")
+    n1 = int(input("Cantidad de elementos para la lista 1: "))
+    cargar_lista(n1, lista1)
+
+    n2 = int(input("\nCantidad de elementos para la lista 2: "))
+    cargar_lista(n2, lista2)
+
+    # Comparar tamaño y contenido de las listas
+    if lista1 == lista2:
+        print("\nLas listas son iguales en tamaño y contenido.")
+    elif len(lista1) == len(lista2):
+        print("\nLas listas son iguales en tamaño pero no en contenido.")
+    else:
+        print("\nLas listas no tienen el mismo tamaño ni contenido.")
+
+# Llamar a la función principal
+if __name__ == "__main__":
+    comparar_listas()
